@@ -1,0 +1,206 @@
+export const translations = {
+  id: {
+    nav: {
+      home: 'Beranda',
+      about: 'Tentang',
+      skills: 'Keahlian',
+      projects: 'Proyek',
+      contact: 'Kontak',
+      pdfDeck: 'Portfolio PDF',
+    },
+    hero: {
+      greeting: 'Halo, saya',
+      name: 'Yudha Putra Anangga',
+      title: 'Full Stack Web Developer',
+      description:
+        'Saya adalah seorang pengembang web yang bersemangat menciptakan aplikasi web modern, responsif, dan user-friendly menggunakan teknologi terbaru.',
+      getInTouch: 'Get in Touch',
+      viewProjects: 'View Projects',
+      previewPdf: 'Lihat & Unduh Portfolio (PDF)',
+      scrollToContent: 'Gulir ke bawah',
+    },
+    about: {
+      title: 'Tentang Saya',
+      p1: 'Saya adalah lulusan Sistem Informasi dengan pengalaman 1 tahun dalam pengembangan web. Saya memiliki minat yang besar pada pengembangan front-end dan back-end.',
+      p2: 'Kemampuan saya meliputi pembuatan website dari konsep hingga produksi, integrasi API, optimasi performa, dan penerapan prinsip UI/UX yang baik. Saya senang mempelajari teknologi baru dan selalu berusaha memberikan kode yang bersih dan terstruktur.',
+      stats: {
+        projects: {
+          num: '2',
+          label: 'Proyek Selesai',
+        },
+        clients: {
+          num: '0',
+          label: 'Klien Puas',
+        },
+        experience: {
+          num: '1',
+          label: 'Tahun Pengalaman',
+        },
+      },
+    },
+    skills: {
+      title: 'Keahlian',
+    },
+    projects: {
+      title: 'Proyek Saya',
+      viewDetails: 'Lihat Detail →',
+      backToList: '← Kembali ke Daftar Proyek',
+      notFound: 'Proyek Tidak Ditemukan',
+      backToProjects: 'Kembali ke Daftar Proyek',
+      liveDemo: '🔗 Demo Live',
+      demoVercel: '▲ Buka di Vercel',
+      deployedOnVercel: '▲ Live di Vercel',
+      sourceCode: '💻 Source Code',
+      keyFeatures: '✨ Fitur Utama',
+      techUsed: '🛠️ Teknologi yang Digunakan',
+      gallery: '📸 Galeri Proyek',
+      otherProjects: 'Proyek Lainnya',
+    },
+    contact: {
+      title: 'Hubungi Saya',
+      infoTitle: 'Informasi Kontak',
+      infoDesc:
+        'Jika Anda memiliki pertanyaan, penawaran proyek, atau sekadar ingin menyapa, silakan hubungi saya melalui form di samping atau kontak di bawah ini.',
+      formTitle: 'Kirim Pesan',
+      nameLabel: 'Nama Lengkap',
+      namePlaceholder: 'Masukkan nama Anda',
+      emailLabel: 'Email Anda',
+      emailPlaceholder: 'nama@email.com',
+      messageLabel: 'Pesan',
+      messagePlaceholder: 'Tulis pesan atau penawaran Anda...',
+      sendButton: 'Kirim Pesan',
+      sendingButton: 'Mengirim Pesan...',
+      successMsg:
+        '✅ Pesan Anda berhasil dikirim langsung ke Gmail Yudha! Terima kasih, saya akan segera membalasnya.',
+      errorMsg:
+        'Terjadi kesalahan saat mengirim pesan. Anda juga dapat mengirim email langsung ke yuda99354@gmail.com.',
+      manualGmail: 'Kirim manual lewat Gmail →',
+      fallbackMsg:
+        'Membuka Gmail untuk mengirim pesan langsung ke yuda99354@gmail.com! (Untuk pengiriman otomatis tanpa membuka Gmail, masukkan Web3Forms Access Key di file .env)',
+      labels: {
+        email: 'Email',
+        phone: 'Telepon / WhatsApp',
+        location: 'Lokasi',
+        locationVal: 'Jakarta, Indonesia',
+        linkedin: 'LinkedIn',
+      },
+    },
+    footer: {
+      brandDesc: 'Terima kasih telah mengunjungi portofolio saya.',
+      followMe: 'Ikuti Saya',
+      copyright: 'Semua hak cipta dilindungi.',
+    },
+    pdfModal: {
+      title: 'Preview Portfolio Deck (PDF)',
+      subtitle: 'Yudha Putra Anangga • Full Stack Web Developer',
+      newTab: 'Tab Baru',
+      downloadPdf: 'Download PDF',
+      close: 'Tutup',
+      tip: '💡 Tip: Anda bisa membaca dokumen ini secara langsung atau klik tombol Download untuk menyimpannya.',
+      formatBadge: 'Format: 16:9 PDF Presentation',
+      downloadShort: 'Unduh',
+    },
+  },
+  en: {
+    nav: {
+      home: 'Home',
+      about: 'About',
+      skills: 'Skills',
+      projects: 'Projects',
+      contact: 'Contact',
+      pdfDeck: 'Portfolio PDF',
+    },
+    hero: {
+      greeting: 'Hello, I am',
+      name: 'Yudha Putra Anangga',
+      title: 'Full Stack Web Developer',
+      description:
+        'I am a passionate web developer dedicated to crafting modern, responsive, and user-friendly web applications using modern technologies.',
+      getInTouch: 'Get in Touch',
+      viewProjects: 'View Projects',
+      previewPdf: 'View & Download Portfolio (PDF)',
+      scrollToContent: 'Scroll to explore',
+    },
+    about: {
+      title: 'About Me',
+      p1: 'I am an Information Systems graduate with 1 year of experience in web development. I have a profound enthusiasm for both front-end and back-end development.',
+      p2: 'My expertise covers building websites from concept to deployment, API integration, performance optimization, and implementing solid UI/UX principles. I love exploring new technologies and always strive to deliver clean, scalable, and well-structured code.',
+      stats: {
+        projects: {
+          num: '2',
+          label: 'Completed Projects',
+        },
+        clients: {
+          num: '0',
+          label: 'Satisfied Clients',
+        },
+        experience: {
+          num: '1',
+          label: 'Year of Experience',
+        },
+      },
+    },
+    skills: {
+      title: 'Skills & Technologies',
+    },
+    projects: {
+      title: 'Featured Projects',
+      viewDetails: 'View Details →',
+      backToList: '← Back to Projects',
+      notFound: 'Project Not Found',
+      backToProjects: 'Back to Projects',
+      liveDemo: '🔗 Live Demo',
+      demoVercel: '▲ Open on Vercel',
+      deployedOnVercel: '▲ Live on Vercel',
+      sourceCode: '💻 Source Code',
+      keyFeatures: '✨ Key Features',
+      techUsed: '🛠️ Technologies Used',
+      gallery: '📸 Project Gallery',
+      otherProjects: 'Other Projects',
+    },
+    contact: {
+      title: 'Contact Me',
+      infoTitle: 'Contact Information',
+      infoDesc:
+        'If you have questions, project inquiries, or just want to say hello, feel free to reach out using the form or through the channels below.',
+      formTitle: 'Send a Message',
+      nameLabel: 'Full Name',
+      namePlaceholder: 'Enter your name',
+      emailLabel: 'Your Email',
+      emailPlaceholder: 'name@email.com',
+      messageLabel: 'Message',
+      messagePlaceholder: 'Write your message or project inquiry...',
+      sendButton: 'Send Message',
+      sendingButton: 'Sending Message...',
+      successMsg:
+        '✅ Your message was successfully sent to Yudha’s Gmail! Thank you, I will reply shortly.',
+      errorMsg:
+        'An error occurred while sending your message. You can also email directly to yuda99354@gmail.com.',
+      manualGmail: 'Send manually via Gmail →',
+      fallbackMsg:
+        'Opening Gmail to send your message directly to yuda99354@gmail.com! (To enable automatic background delivery, set your Web3Forms Access Key in .env)',
+      labels: {
+        email: 'Email',
+        phone: 'Phone / WhatsApp',
+        location: 'Location',
+        locationVal: 'Jakarta, Indonesia',
+        linkedin: 'LinkedIn',
+      },
+    },
+    footer: {
+      brandDesc: 'Thank you for visiting my portfolio website.',
+      followMe: 'Follow Me',
+      copyright: 'All rights reserved.',
+    },
+    pdfModal: {
+      title: 'Preview Portfolio Deck (PDF)',
+      subtitle: 'Yudha Putra Anangga • Full Stack Web Developer',
+      newTab: 'New Tab',
+      downloadPdf: 'Download PDF',
+      close: 'Close',
+      tip: '💡 Tip: You can read this deck presentation directly here or click Download to save it to your device.',
+      formatBadge: 'Format: 16:9 PDF Presentation',
+      downloadShort: 'Download',
+    },
+  },
+}
