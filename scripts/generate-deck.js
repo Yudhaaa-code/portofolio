@@ -862,6 +862,23 @@ async function generatePDF() {
     doc.text(doc.splitTextToSize(sk.category, 40), x + 8, y + 26);
   });
 
+  // Helper for crisp Vercel badge
+  function drawVercelBadge(x, y) {
+    doc.setFillColor(9, 13, 22);
+    doc.setDrawColor(16, 185, 129);
+    doc.setLineWidth(0.5);
+    doc.roundedRect(x, y, 38, 7.5, 2, 2, "FD");
+
+    // Clean vector triangle for Vercel (no corrupted unicode)
+    doc.setFillColor(255, 255, 255);
+    doc.triangle(x + 4.5, y + 5.5, x + 7.5, y + 2, x + 10.5, y + 5.5, "F");
+
+    doc.setTextColor(16, 185, 129);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(7.5);
+    doc.text("VERCEL LIVE", x + 13, y + 5.2);
+  }
+
   // --- PAGE 4: PROJECT 1 (GOERSTICKET) ---
   doc.addPage([297, 167.06], "landscape");
   setBg();
@@ -878,40 +895,53 @@ async function generatePDF() {
   // Big Showcase Card
   doc.setFillColor(17, 24, 39);
   doc.setDrawColor(31, 41, 55);
-  doc.roundedRect(20, 42, 257, 110, 3, 3, "FD");
+  doc.roundedRect(20, 42, 257, 114, 3, 3, "FD");
 
-  // Vercel Live Badge
-  doc.setFillColor(9, 13, 22);
-  doc.setDrawColor(16, 185, 129);
-  doc.roundedRect(28, 49, 75, 8, 2, 2, "FD");
-  doc.setTextColor(16, 185, 129);
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(8.5);
-  doc.text("▲ DEPLOYED ON VERCEL • LIVE DEMO", 32, 54.5);
+  // Vercel Live Badge & Links Header Row
+  drawVercelBadge(28, 48);
 
-  // Live URL & GitHub
   doc.setTextColor(6, 182, 212);
-  doc.setFontSize(9.5);
-  doc.text("Demo: https://ticketing-yudhaaa.vercel.app  •  Repo: github.com/Yudhaaa-code/ticketing", 110, 54.5);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(8.8);
+  doc.text("Demo: https://ticketing-yudhaaa.vercel.app  •  Repo: github.com/Yudhaaa-code/ticketing", 72, 53);
 
-  // Tech Stack Subtitle
+  // Subtle divider between header row and content
+  doc.setDrawColor(31, 41, 55);
+  doc.setLineWidth(0.4);
+  doc.line(28, 59, 269, 59);
+
+  // Left Column: Tech Stack & Overview
   doc.setTextColor(16, 185, 129);
-  doc.setFontSize(10.5);
   doc.setFont("helvetica", "bold");
-  doc.text("Tech Stack: Next.js 16 (App Router) • React 19 • Tailwind CSS v4 • Prisma ORM • PostgreSQL", 28, 65);
+  doc.setFontSize(10);
+  doc.text("Tech Stack & Arsitektur:", 28, 67);
 
-  // Left Column: Detailed Description
+  // Tech Stack Box
+  doc.setFillColor(9, 13, 22);
+  doc.setDrawColor(31, 41, 55);
+  doc.roundedRect(28, 71, 118, 14, 2, 2, "FD");
   doc.setTextColor(203, 213, 225);
   doc.setFont("helvetica", "normal");
+  doc.setFontSize(8);
+  doc.text("Next.js 16 (App Router) • React 19 • Tailwind CSS v4\nPrisma ORM • PostgreSQL • QR Code Engine", 32, 76.5);
+
+  // Left Column: Detailed Description
+  doc.setTextColor(255, 255, 255);
+  doc.setFont("helvetica", "bold");
   doc.setFontSize(10);
+  doc.text("Deskripsi Proyek:", 28, 93);
+
+  doc.setTextColor(148, 163, 184);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(8.8);
   const descTicket = "GoersTicket adalah platform ticketing event terintegrasi yang terinspirasi oleh GoersApp. Mengakomodasi pencarian event interaktif, pemilihan tier tiket dinamis, alur checkout dengan simulasi pembayaran QRIS instan & Virtual Account, dompet tiket digital dengan kode QR asli, serta dashboard organizer dan alat pemindai (scanner) onsite untuk validasi tiket di lokasi acara.";
-  doc.text(doc.splitTextToSize(descTicket, 120), 28, 73);
+  doc.text(doc.splitTextToSize(descTicket, 118), 28, 100);
 
   // Right Column: Key Features
   doc.setTextColor(255, 255, 255);
   doc.setFont("helvetica", "bold");
-  doc.setFontSize(11);
-  doc.text("Fitur & Keunggulan Utama:", 158, 65);
+  doc.setFontSize(10);
+  doc.text("Fitur & Keunggulan Utama:", 156, 67);
 
   const featuresTicket = [
     "• Eksplorasi & filter event interaktif (Konser, Festival, Workshop, Seni)",
@@ -925,8 +955,8 @@ async function generatePDF() {
   featuresTicket.forEach((f, i) => {
     doc.setTextColor(148, 163, 184);
     doc.setFont("helvetica", "normal");
-    doc.setFontSize(9.2);
-    doc.text(doc.splitTextToSize(f, 110), 158, 73 + i * 11);
+    doc.setFontSize(8.6);
+    doc.text(doc.splitTextToSize(f, 115), 156, 75 + i * 11.5);
   });
 
   // --- PAGE 5: PROJECT 2 (ACSA PLAKAT) ---
@@ -945,40 +975,53 @@ async function generatePDF() {
   // Big Showcase Card
   doc.setFillColor(17, 24, 39);
   doc.setDrawColor(31, 41, 55);
-  doc.roundedRect(20, 42, 257, 110, 3, 3, "FD");
+  doc.roundedRect(20, 42, 257, 114, 3, 3, "FD");
 
-  // Vercel Live Badge
-  doc.setFillColor(9, 13, 22);
-  doc.setDrawColor(16, 185, 129);
-  doc.roundedRect(28, 49, 75, 8, 2, 2, "FD");
-  doc.setTextColor(16, 185, 129);
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(8.5);
-  doc.text("▲ DEPLOYED ON VERCEL • LIVE DEMO", 32, 54.5);
+  // Vercel Live Badge & Links Header Row
+  drawVercelBadge(28, 48);
 
-  // Live URL & GitHub
   doc.setTextColor(6, 182, 212);
-  doc.setFontSize(9.5);
-  doc.text("Demo: https://ecommerce-yudhaaa.vercel.app  •  Repo: github.com/Yudhaaa-code/E-Commerce", 110, 54.5);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(8.8);
+  doc.text("Demo: https://ecommerce-yudhaaa.vercel.app  •  Repo: github.com/Yudhaaa-code/E-Commerce", 72, 53);
 
-  // Tech Stack Subtitle
+  // Subtle divider between header row and content
+  doc.setDrawColor(31, 41, 55);
+  doc.setLineWidth(0.4);
+  doc.line(28, 59, 269, 59);
+
+  // Left Column: Tech Stack & Overview
   doc.setTextColor(16, 185, 129);
-  doc.setFontSize(10.5);
   doc.setFont("helvetica", "bold");
-  doc.text("Tech Stack: Next.js 16 (App Router) • React 19 • TypeScript • Prisma ORM • Tailwind CSS • Framer Motion", 28, 65);
+  doc.setFontSize(10);
+  doc.text("Tech Stack & Arsitektur:", 28, 67);
 
-  // Left Column: Detailed Description
+  // Tech Stack Box
+  doc.setFillColor(9, 13, 22);
+  doc.setDrawColor(31, 41, 55);
+  doc.roundedRect(28, 71, 118, 14, 2, 2, "FD");
   doc.setTextColor(203, 213, 225);
   doc.setFont("helvetica", "normal");
+  doc.setFontSize(8);
+  doc.text("Next.js 16 (App Router) • React 19 • TypeScript • Tailwind CSS\nPrisma ORM • Midtrans Snap • Framer Motion", 32, 76.5);
+
+  // Left Column: Detailed Description
+  doc.setTextColor(255, 255, 255);
+  doc.setFont("helvetica", "bold");
   doc.setFontSize(10);
+  doc.text("Deskripsi Proyek:", 28, 93);
+
+  doc.setTextColor(148, 163, 184);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(8.8);
   const descACSA = "Website e-commerce spesialis plakat penghargaan, piala kristal, dan merchandise custom premium (ACSA). Dilengkapi katalog interaktif dengan filter kategori, keranjang belanja real-time (Cart Drawer), checkout dengan simulasi payment gateway Midtrans Snap sandbox, fitur konsultasi desain kustom via WhatsApp resmi, serta dashboard admin terintegrasi untuk kelola produk dan data pesanan.";
-  doc.text(doc.splitTextToSize(descACSA, 120), 28, 73);
+  doc.text(doc.splitTextToSize(descACSA, 118), 28, 100);
 
   // Right Column: Key Features
   doc.setTextColor(255, 255, 255);
   doc.setFont("helvetica", "bold");
-  doc.setFontSize(11);
-  doc.text("Fitur & Keunggulan Utama:", 158, 65);
+  doc.setFontSize(10);
+  doc.text("Fitur & Keunggulan Utama:", 156, 67);
 
   const featuresACSA = [
     "• Katalog produk kustom rapi (Akrilik, Kayu, Kristal, Logam)",
@@ -992,8 +1035,8 @@ async function generatePDF() {
   featuresACSA.forEach((f, i) => {
     doc.setTextColor(148, 163, 184);
     doc.setFont("helvetica", "normal");
-    doc.setFontSize(9.2);
-    doc.text(doc.splitTextToSize(f, 110), 158, 73 + i * 11);
+    doc.setFontSize(8.6);
+    doc.text(doc.splitTextToSize(f, 115), 156, 75 + i * 11.5);
   });
 
   // --- PAGE 6: CONTACT & CLOSING ---
