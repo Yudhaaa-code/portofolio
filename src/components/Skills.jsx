@@ -1,27 +1,31 @@
 import { useLanguage } from '../context/LanguageContext'
-import mariadbLogo from '../assets/mariadb-logo.png'
+import {
+  ReactIcon,
+  NextjsIcon,
+  TypeScriptIcon,
+  JavaScriptIcon,
+  NodejsIcon,
+  TailwindIcon,
+  PrismaIcon,
+  PostgreSqlIcon,
+  MariaDbIcon,
+  GitIcon,
+} from './ui/TechIcons'
 
 function Skills() {
   const { t } = useLanguage()
 
   const skills = [
-    { name: 'React JS', icon: '⚛️' },
-    { name: 'JavaScript', icon: '📜' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'HTML & CSS', icon: '🎨' },
-    { name: 'Tailwind CSS', icon: '🌊' },
-    {
-      name: 'MariaDB',
-      icon: (
-        <img
-          src={mariadbLogo}
-          alt="MariaDB Logo"
-          className="skill-img-icon"
-        />
-      ),
-    },
-    { name: 'MySQL', icon: '🐬' },
-    { name: 'Git & GitHub', icon: '🐙' },
+    { name: 'Next.js', category: 'Framework', icon: <NextjsIcon /> },
+    { name: 'React 19', category: 'Frontend', icon: <ReactIcon /> },
+    { name: 'TypeScript', category: 'Language', icon: <TypeScriptIcon /> },
+    { name: 'JavaScript (ES6+)', category: 'Language', icon: <JavaScriptIcon /> },
+    { name: 'Tailwind CSS', category: 'Styling', icon: <TailwindIcon /> },
+    { name: 'Node.js', category: 'Backend', icon: <NodejsIcon /> },
+    { name: 'Prisma ORM', category: 'Database', icon: <PrismaIcon /> },
+    { name: 'PostgreSQL', category: 'Database', icon: <PostgreSqlIcon /> },
+    { name: 'MariaDB / MySQL', category: 'Database', icon: <MariaDbIcon /> },
+    { name: 'Git & GitHub', category: 'Tooling', icon: <GitIcon /> },
   ]
 
   return (
@@ -31,9 +35,10 @@ function Skills() {
         <div className="section-divider"></div>
         <div className="skills-grid">
           {skills.map((skill) => (
-            <div key={skill.name} className="skill-card">
+            <div key={skill.name} className="skill-card group">
               <div className="skill-icon">{skill.icon}</div>
               <h3 className="skill-name">{skill.name}</h3>
+              <span className="skill-category-badge">{skill.category}</span>
             </div>
           ))}
         </div>

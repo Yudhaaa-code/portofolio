@@ -5,6 +5,19 @@ const projects = [
       id: 'GoersTicket - Platform Ticketing Event',
       en: 'GoersTicket - Event Ticketing Platform',
     },
+    category: {
+      id: 'Event Ticketing & Payments',
+      en: 'Event Ticketing & Payments',
+    },
+    role: {
+      id: 'Full-Stack Developer',
+      en: 'Full-Stack Developer',
+    },
+    status: {
+      id: 'Production Ready',
+      en: 'Production Ready',
+    },
+    year: '2025',
     image: '🎟️',
     badge: 'Vercel',
     shortDesc: {
@@ -55,6 +68,19 @@ const projects = [
       id: 'ACSA Plakat - E-Commerce Web App',
       en: 'ACSA Plakat - Custom E-Commerce Web App',
     },
+    category: {
+      id: 'Custom E-Commerce & Payments',
+      en: 'Custom E-Commerce & Payments',
+    },
+    role: {
+      id: 'Full-Stack Developer',
+      en: 'Full-Stack Developer',
+    },
+    status: {
+      id: 'Production Ready',
+      en: 'Production Ready',
+    },
+    year: '2025',
     image: '🛒',
     badge: 'Vercel',
     shortDesc: {

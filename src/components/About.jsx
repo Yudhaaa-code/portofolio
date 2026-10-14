@@ -18,8 +18,8 @@ function About() {
                 <p>{t('about.stats.projects.label')}</p>
               </div>
               <div className="info-item">
-                <h4>{t('about.stats.clients.num')}</h4>
-                <p>{t('about.stats.clients.label')}</p>
+                <h4>{t('about.stats.production.num')}</h4>
+                <p>{t('about.stats.production.label')}</p>
               </div>
               <div className="info-item">
                 <h4>{t('about.stats.experience.num')}</h4>
