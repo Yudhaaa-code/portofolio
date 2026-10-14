@@ -96,7 +96,7 @@ async function generatePPTX() {
 
   // Description
   slide1.addText(
-    "Lulusan Sistem Informasi dengan pengalaman 2+ tahun dalam pengembangan web modern, performan tinggi, dan user-friendly menggunakan ekosistem React, Node.js, dan cloud technologies.",
+    "Full-Stack Developer yang berfokus pada ekosistem Next.js, React, dan arsitektur database relasional. Berpengalaman merancang dan mendeploy aplikasi web siap produksi dari konsep hingga implementasi payment gateway.",
     {
       x: 4.2,
       y: 3.2,
@@ -110,23 +110,23 @@ async function generatePPTX() {
   );
 
   // Quick Badges
-  const badges = ["⚛️ React JS", "🟢 Node.js", "🍃 MongoDB", "🐬 MySQL", "🎨 Tailwind CSS"];
+  const badges = ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "Prisma ORM", "PostgreSQL"];
   badges.forEach((b, i) => {
     slide1.addShape(pptx.ShapeType.roundRect, {
-      x: 4.2 + i * 1.6,
+      x: 4.2 + i * 1.35,
       y: 4.3,
-      w: 1.5,
+      w: 1.25,
       h: 0.45,
       rectRadius: 0.1,
       fill: { color: COLORS.bgCard },
       line: { color: COLORS.borderCard, width: 1 },
     });
     slide1.addText(b, {
-      x: 4.2 + i * 1.6,
+      x: 4.2 + i * 1.35,
       y: 4.3,
-      w: 1.5,
+      w: 1.25,
       h: 0.45,
-      fontSize: 10,
+      fontSize: 9.5,
       fontFace: "Arial",
       align: "center",
       color: COLORS.textWhite,
@@ -182,32 +182,32 @@ async function generatePPTX() {
   });
 
   slide2.addText(
-    "Saya adalah seorang Full Stack Web Developer lulusan Sistem Informasi dengan pengalaman lebih dari 2 tahun dalam merancang dan mengembangkan aplikasi web skala produksi.\n\nFokus utama saya adalah membangun aplikasi yang tidak hanya estetik dan responsif dari sisi front-end, namun juga memiliki arsitektur backend yang kokoh, terstruktur, serta database yang teroptimasi secara efisien.",
+    "Saya adalah lulusan Sistem Informasi dengan pengalaman praktis dalam pengembangan web full-stack. Terbiasa menangani siklus pengembangan aplikasi secara menyeluruh: mulai dari pemodelan basis data relasional (PostgreSQL & MariaDB), integrasi REST API, hingga perancangan antarmuka yang cepat dan responsif.\n\nFokus utama saya adalah efisiensi kode, arsitektur yang mudah dirawat (clean architecture), dan keandalan sistem produksi—termasuk implementasi gateway pembayaran digital (Midtrans, QRIS) serta validasi tiket real-time.",
     {
       x: 1.1,
       y: 1.9,
       w: 11.1,
       h: 1.3,
-      fontSize: 13,
+      fontSize: 12,
       fontFace: "Arial",
       color: COLORS.textSecondary,
-      lineSpacing: 20,
+      lineSpacing: 18,
     }
   );
 
   // 3 Value Pillars
   const pillars = [
     {
-      title: "🎨 Frontend Excellence",
-      desc: "Spesialisasi di React.js, Tailwind CSS, animasi interaktif Framer Motion, dan integrasi komponen modern berbasis shadcn/ui.",
+      title: "Frontend Excellence",
+      desc: "Spesialisasi di Next.js App Router, React 19, TypeScript, Tailwind CSS v4, dan antarmuka komponen modern.",
     },
     {
-      title: "⚙️ Robust Backend & API",
-      desc: "Pengembangan RESTful API menggunakan Node.js dan Express, autentikasi aman, dan integrasi payment gateway pihak ketiga.",
+      title: "Backend & Integrations",
+      desc: "Integrasi API aman, workflow checkout payment gateway (Midtrans Snap, QRIS), dan real-time verification scanner.",
     },
     {
-      title: "🗄️ Database & Optimization",
-      desc: "Manajemen basis data relasional (MySQL) dan NoSQL (MongoDB), pemodelan skema efisien, serta optimasi query kecepatan tinggi.",
+      title: "Database Architecture",
+      desc: "Manajemen basis data relasional via Prisma ORM, PostgreSQL, MariaDB, perancangan skema relasional, dan query efisien.",
     },
   ];
 
@@ -716,7 +716,7 @@ async function generatePDF() {
   doc.setTextColor(148, 163, 184);
   doc.setFont("helvetica", "normal");
   doc.setFontSize(12);
-  const bio = "Lulusan Sistem Informasi dengan pengalaman 1 tahun dalam pengembangan web modern, performan tinggi, dan user-friendly menggunakan ekosistem React, Node.js, dan database management.";
+  const bio = "Full-Stack Developer yang berfokus pada ekosistem Next.js, React, dan arsitektur database relasional. Berpengalaman merancang dan mendeploy aplikasi web siap produksi dari konsep hingga implementasi payment gateway.";
   doc.text(doc.splitTextToSize(bio, 170), 25, 85);
 
   // Profile image — original 107x160px (portrait)
@@ -740,7 +740,7 @@ async function generatePDF() {
   }
 
   // Badges (sesuai website)
-  const badges = ["React JS", "JavaScript", "Node.js", "Tailwind CSS", "MariaDB", "MySQL", "Git & GitHub"];
+  const badges = ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "Node.js", "Prisma ORM", "PostgreSQL"];
   badges.forEach((b, i) => {
     const x = 25 + i * 35;
     if (x + 30 <= 240) {
@@ -773,20 +773,20 @@ async function generatePDF() {
   // Main about card
   doc.setFillColor(17, 24, 39);
   doc.setDrawColor(31, 41, 55);
-  doc.roundedRect(20, 42, 257, 40, 3, 3, "FD");
+  doc.roundedRect(20, 42, 257, 42, 3, 3, "FD");
 
   doc.setTextColor(203, 213, 225);
   doc.setFont("helvetica", "normal");
-  doc.setFontSize(10.5);
-  const aboutP1 = "Saya adalah lulusan Sistem Informasi dengan pengalaman 1 tahun dalam pengembangan web. Saya memiliki minat yang besar pada pengembangan front-end dan back-end.";
-  const aboutP2 = "Kemampuan saya meliputi pembuatan website dari konsep hingga produksi, integrasi API, optimasi performa, dan penerapan prinsip UI/UX yang baik. Saya senang mempelajari teknologi baru dan selalu berusaha memberikan kode yang bersih dan terstruktur.";
-  doc.text(doc.splitTextToSize(`${aboutP1}\n\n${aboutP2}`, 245), 26, 51);
+  doc.setFontSize(10);
+  const aboutP1 = "Saya adalah lulusan Sistem Informasi dengan pengalaman praktis dalam pengembangan web full-stack. Terbiasa menangani siklus pengembangan aplikasi secara menyeluruh: mulai dari pemodelan basis data relasional (PostgreSQL & MariaDB), integrasi REST API, hingga perancangan antarmuka yang cepat dan responsif.";
+  const aboutP2 = "Fokus utama saya adalah efisiensi kode, arsitektur yang mudah dirawat (clean architecture), dan keandalan sistem produksi—termasuk implementasi gateway pembayaran digital (Midtrans, QRIS) serta validasi tiket real-time.";
+  doc.text(doc.splitTextToSize(`${aboutP1}\n\n${aboutP2}`, 245), 26, 50);
 
-  // About Stats (sesuai data website yang baru diubah user: 2 proyek, 0 klien puas)
+  // About Stats (sesuai website baru: Proyek Full-Stack, Production Ready, Tahun Pengalaman)
   const stats = [
-    { num: "2", label: "Proyek Selesai", desc: "Aplikasi web skala produksi (Vercel)" },
-    { num: "0", label: "Klien Puas", desc: "Fokus pengembangan produk & portfolio" },
-    { num: "1", label: "Tahun Pengalaman", desc: "Eksplorasi & implementasi aktif" },
+    { num: "2+", label: "Proyek Full-Stack", desc: "Aplikasi web skala produksi (Vercel)" },
+    { num: "100%", label: "Production Ready", desc: "Arsitektur bersih & siap deploy" },
+    { num: "1+", label: "Tahun Pengalaman", desc: "Eksplorasi & implementasi aktif" },
   ];
 
   stats.forEach((st, idx) => {
@@ -794,21 +794,21 @@ async function generatePDF() {
     doc.setFillColor(17, 24, 39);
     doc.setDrawColor(16, 185, 129);
     doc.setLineWidth(0.6);
-    doc.roundedRect(x, 90, 81, 58, 3, 3, "FD");
+    doc.roundedRect(x, 92, 81, 58, 3, 3, "FD");
 
     doc.setTextColor(16, 185, 129);
     doc.setFont("helvetica", "bold");
     doc.setFontSize(24);
-    doc.text(st.num, x + 40, 110, { align: "center" });
+    doc.text(st.num, x + 40, 112, { align: "center" });
 
     doc.setTextColor(255, 255, 255);
     doc.setFontSize(13);
-    doc.text(st.label, x + 40, 122, { align: "center" });
+    doc.text(st.label, x + 40, 124, { align: "center" });
 
     doc.setTextColor(148, 163, 184);
     doc.setFont("helvetica", "normal");
     doc.setFontSize(9.5);
-    doc.text(st.desc, x + 40, 134, { align: "center" });
+    doc.text(st.desc, x + 40, 136, { align: "center" });
   });
 
   // --- PAGE 3: SKILLS ---
@@ -825,39 +825,41 @@ async function generatePDF() {
   doc.text("Penguasaan Teknologi & Tools", 20, 32);
 
   const skillsList = [
-    { icon: "⚛️", name: "React JS", category: "Frontend Core" },
-    { icon: "📜", name: "JavaScript", category: "Programming Language" },
-    { icon: "🟢", name: "Node.js", category: "Backend Runtime" },
-    { icon: "🎨", name: "HTML & CSS", category: "Web Standards" },
-    { icon: "🌊", name: "Tailwind CSS", category: "Styling Framework" },
-    { icon: "🦭", name: "MariaDB", category: "Relational Database" },
-    { icon: "🐬", name: "MySQL", category: "Relational Database" },
-    { icon: "🐙", name: "Git & GitHub", category: "Version Control" },
+    { name: "Next.js", category: "Full-Stack Framework" },
+    { name: "React 19", category: "Frontend Core Library" },
+    { name: "TypeScript", category: "Programming Language" },
+    { name: "JavaScript", category: "ES6+ Standards" },
+    { name: "Tailwind CSS", category: "Styling Framework" },
+    { name: "Node.js", category: "Backend Runtime" },
+    { name: "Prisma ORM", category: "Database ORM" },
+    { name: "PostgreSQL", category: "Relational Database" },
+    { name: "MariaDB / MySQL", category: "Relational Database" },
+    { name: "Git & GitHub", category: "Version Control & CI/CD" },
   ];
 
   skillsList.forEach((sk, idx) => {
-    const col = idx % 4;
-    const row = Math.floor(idx / 4);
-    const x = 20 + col * 66;
-    const y = 50 + row * 48;
+    const col = idx % 5;
+    const row = Math.floor(idx / 5);
+    const x = 20 + col * 53;
+    const y = 48 + row * 52;
 
     doc.setFillColor(17, 24, 39);
     doc.setDrawColor(31, 41, 55);
-    doc.roundedRect(x, y, 59, 40, 3, 3, "FD");
+    doc.roundedRect(x, y, 48, 44, 3, 3, "FD");
 
     // Top indicator
     doc.setFillColor(16, 185, 129);
-    doc.circle(x + 12, y + 14, 4, "F");
+    doc.circle(x + 10, y + 13, 3.5, "F");
 
     doc.setTextColor(255, 255, 255);
     doc.setFont("helvetica", "bold");
-    doc.setFontSize(13);
-    doc.text(sk.name, x + 20, y + 16);
+    doc.setFontSize(10.5);
+    doc.text(sk.name, x + 16, y + 15);
 
     doc.setTextColor(6, 182, 212);
     doc.setFont("helvetica", "normal");
-    doc.setFontSize(9);
-    doc.text(sk.category, x + 12, y + 27);
+    doc.setFontSize(8.5);
+    doc.text(doc.splitTextToSize(sk.category, 40), x + 8, y + 26);
   });
 
   // --- PAGE 4: PROJECT 1 (GOERSTICKET) ---
